@@ -16,7 +16,7 @@ document.addEventListener("DOMContentLoaded", (event) => {
 
 function addImage() {
   const image = document.createElement("img");
-  image.src = "column3.jpg"; // Replace with your image path
+  image.src = "img/column3.jpg""; // Replace with your image path
   image.classList.add("dynamic-image");
   document.body.appendChild(image);
 }
