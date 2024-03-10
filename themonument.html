@@ -5,20 +5,42 @@
 <title>Endless Roman Column</title>
 <style>
   
-    .dynamic-image {
+
+  #rightarrow {
+    position: fixed;
+    right: 20px; /* Adjust as needed */
+    top: 50%; /* Vertically center */
+    transform: translateY(-50%);
+    z-index: 1000;
+    height: 5%;
+    opacity:.80;
+}
+#leftarrow {
+    position: fixed;
+    left: 20px; /* Adjust as needed */
+    top: 50%; /* Vertically center */
+    transform: translateY(-50%);
+    z-index: 1000;
+    height: 5%;
+    opacity: .80;
+}
+
+ .dynamic-image {
         
         left: 48%;
-        /* position:fixed; */
+    
         transform: translateX(450%);
         width: 10%;
     
         display: block;
+        z-index: 10;
     }
 
 </style>
 </head>
 <body>
-
+    <a href="http://endlessromancolumn.com/printyourowncolumn.html" target="_blank" ><img id="rightarrow" src="img/rightarrow4.png"></a>
+    <a href="[your-link-url]"><img id="leftarrow" src="img/leftarrow4.png"></a>
 <script src="sketch.js"></script>
 </body>
 </html>
