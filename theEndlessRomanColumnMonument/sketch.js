@@ -28,7 +28,7 @@ function addImageTop() {
     const imageHeight = this.height;
     window.scrollTo(0, window.scrollY + imageHeight);
   };
-  image.src = "column3.jpg"; // Replace with your image path
+  image.src = "img/column3.jpg"; // Replace with your image path
   image.classList.add("dynamic-image");
   document.body.insertBefore(image, document.body.firstChild);
 }
