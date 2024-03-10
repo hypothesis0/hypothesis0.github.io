@@ -1,0 +1,24 @@
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Endless Roman Column</title>
+<style>
+  
+    .dynamic-image {
+        
+        left: 48%;
+        /* position:fixed; */
+        transform: translateX(450%);
+        width: 10%;
+    
+        display: block;
+    }
+
+</style>
+</head>
+<body>
+
+<script src="sketch.js"></script>
+</body>
+</html>
