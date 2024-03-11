@@ -1,22 +1,24 @@
-document.addEventListener("DOMContentLoaded", (event) => {
-  // Load initial images
-  addImage(); // Adds an image at the bottom
-  addImageTop(); // Adds an image at the top
+document.addEventListener("DOMContentLoaded", () => {
+  // Existing image loading functionality
+  addImage();
+  addImageTop();
 
   window.addEventListener("scroll", () => {
     if (window.innerHeight + window.scrollY >= document.body.offsetHeight) {
-      // User is at the bottom of the page
       addImage();
     } else if (window.scrollY === 0) {
-      // User is at the top of the page
       addImageTop();
     }
   });
+
+  // Update page height display initially and on scroll
+  updatePageHeightDisplay();
+  window.addEventListener("scroll", updatePageHeightDisplay);
 });
 
 function addImage() {
   const image = document.createElement("img");
-  image.src = "img/column3.jpg"; // Replace with your image path
+  image.src = "img/column3.jpg"; // Make sure this path is correct
   image.classList.add("dynamic-image");
   document.body.appendChild(image);
 }
@@ -24,11 +26,18 @@ function addImage() {
 function addImageTop() {
   const image = document.createElement("img");
   image.onload = function () {
-    // Adjust the scroll only after the image has loaded and its height is known
     const imageHeight = this.height;
     window.scrollTo(0, window.scrollY + imageHeight);
   };
-  image.src = "img/column3.jpg"; // Replace with your image path
+  image.src = "img/column3.jpg"; // Make sure this path is correct
   image.classList.add("dynamic-image");
   document.body.insertBefore(image, document.body.firstChild);
+}
+
+function updatePageHeightDisplay() {
+  const pixels = document.documentElement.scrollHeight;
+  const centimeters = (pixels / 96) * 2.54;
+  document.getElementById(
+    "pageHeightDisplay"
+  ).textContent = `column height: ${centimeters.toFixed(2)} cm`;
 }
