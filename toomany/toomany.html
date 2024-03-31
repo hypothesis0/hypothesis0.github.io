@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   
+    <style>
+         html, body {
+            margin: 0;
+            padding: 0;
+            overflow: hidden; /* Prevents scrollbars */
+        }
+        #image-container {
+            position: relative;
+            width: 100vw;
+            height: 100vh;
+            box-sizing: border-box;
+        }
+
+        #image-container img {
+            position: absolute;
+        }
+        #wannamore {
+            position: fixed;
+            color: rgb(227, 3, 3);
+            font-family: 'Arial', sans-serif;
+            font-size: 30px;
+            bottom: 30%;
+            left: 50%;
+            transform: translateX(-50%);
+            animation: floatAnimation 2s ease-in-out infinite;
+            z-index:500;
+        }
+    </style>
+</head>
+<body>
+    <a href="http://endlessromancolumn.com/welovecolumn/donoteverwork.html" target="_blank" id="wannamore">why we need that many columns</a>
+    <div id="image-container">
+        <img src="column1.jpg" alt="Image 1">
+        <img src="column2.jpg" alt="Image 2">
+        <img src="column3.jpg" alt="Image 3">
+        <img src="column4.jpeg" alt="Image 4">
+        
+        <img src="column6.jpg" alt="Image 6">        
+        <img src="column7.jpg" alt="Image 7">
+        <img src="column8.jpg" alt="Image 8">
+        <img src="column9.jpeg" alt="Image 9">        
+        <img src="column10.jpg" alt="Image 10">
+        <img src="column11.jpeg" alt="Image 11">
+      
+        <!-- Add more images as needed -->
+    </div>
+    <script src="toomanysketch.js"></script>
+</body>
+</html>
