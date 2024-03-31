@@ -40,6 +40,6 @@ function updatePageHeightDisplay() {
   const pageHeightDisplay = document.getElementById("pageHeightDisplay");
   pageHeightDisplay.textContent = `column height: ${centimeters.toFixed(2)} cm`;
   // Optionally update the href if it needs to be dynamic
-  pageHeightDisplay.href = "your-dynamic-url-based-on-height-or-other-logic";
+  pageHeightDisplay.href = "https://endlessromancolumn.com/welovecolumn/columnfalls.html";
 }
 
