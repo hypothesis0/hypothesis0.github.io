@@ -37,7 +37,9 @@ function addImageTop() {
 function updatePageHeightDisplay() {
   const pixels = document.documentElement.scrollHeight;
   const centimeters = (pixels / 96) * 2.54;
-  document.getElementById(
-    "pageHeightDisplay"
-  ).textContent = `column height: ${centimeters.toFixed(2)} cm`;
+  const pageHeightDisplay = document.getElementById("pageHeightDisplay");
+  pageHeightDisplay.textContent = `column height: ${centimeters.toFixed(2)} cm`;
+  // Optionally update the href if it needs to be dynamic
+  pageHeightDisplay.href = "your-dynamic-url-based-on-height-or-other-logic";
 }
+
