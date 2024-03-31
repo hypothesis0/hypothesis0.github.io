@@ -1,0 +1,61 @@
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Endless Roman Column</title>
+<style>
+  
+
+    #pageHeightDisplay {
+    position: fixed;
+    bottom: 10px; /* Distance from the bottom of the viewport */
+    right: 10px; /* Distance from the right of the viewport */
+    background-color: white; /* Background color for visibility */
+    padding: 5px; /* Padding around the text */
+    border: 1px solid #ddd; /* Optional: adds a border */
+    z-index: 1001; /* Ensures it stays above other content */
+    opacity: 0.8; /* Optional: makes the background slightly transparent */
+}
+
+    .dynamic-image {    
+        left: 48%;
+        transform: translateX(450%);
+        width: 10%;
+        display: block;
+        z-index: 10;
+    }
+    .dynamic-heart {
+        position: absolute;
+        font-size: 16px; /* Adjust the size of the hearts */
+      
+        /* Add more styles or animations as needed */
+    }
+    #pageHeightDisplay {
+        position: fixed;
+        bottom: 10px; /* Distance from the bottom of the viewport */
+        right: 10px; /* Distance from the right of the viewport */
+        background-color: white; /* Background color for visibility */
+        padding: 5px; /* Padding around the text */
+        border: 1px solid #ddd; /* Optional: adds a border */
+        z-index: 1001; /* Ensures it stays above other content */
+        opacity: 0.8; /* Optional: makes the background slightly transparent */
+    }
+
+
+#scrollForLove {
+    position: absolute; /* Make sure it doesn't affect the positioning of other fixed elements */
+ 
+  
+}
+
+</style>
+</head>
+<body>
+
+    <div id="scrollForLove">scroll with love</div>
+    <!-- Placeholder for displaying the page height -->
+    <div id="pageHeightDisplay">column height: 0 cm</div>
+
+<script src="sketchwithheart.js"></script>
+</body>
+</html>
