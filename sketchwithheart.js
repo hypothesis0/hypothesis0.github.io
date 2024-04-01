@@ -2,23 +2,24 @@ document.addEventListener("DOMContentLoaded", () => {
   // Existing image loading functionality
   addImage();
   addImageTop();
+  adjustHeartsToColumnHeight();
+  updatePageHeightDisplay();
+  // Instead of solely relying on scroll, periodically adjust hearts
+  setInterval(() => {
+    adjustHeartsToColumnHeight();
+    updatePageHeightDisplay();
+  }, 1000); // Adjust every 1000 milliseconds (1 second)
 
-  // Combined scroll event listener for images, hearts, and height display
   window.addEventListener("scroll", () => {
+    // Keep these if you're adding images on scroll to extend the page
     if (window.innerHeight + window.scrollY >= document.body.offsetHeight) {
       addImage();
     } else if (window.scrollY === 0) {
       addImageTop();
     }
-
-    adjustHeartsToColumnHeight();
-    updatePageHeightDisplay();
   });
-
-  // Initial adjustments
-  adjustHeartsToColumnHeight();
-  updatePageHeightDisplay();
 });
+// Observing dynamic content changes that affect layout
 
 function addImage() {
   const image = document.createElement("img");
@@ -47,11 +48,9 @@ function addImageTop() {
 function addHeart() {
   const heart = document.createElement("div");
   heart.textContent = "♡";
-  heart.style.position = "absolute";
+  heart.style.position = "fixed";
   heart.style.left = `${Math.random() * window.innerWidth}px`;
-  heart.style.top = `${
-    Math.random() * document.documentElement.scrollHeight
-  }px`;
+  heart.style.top = `${Math.random() * window.innerHeight}px`;
   heart.classList.add("dynamic-heart");
   document.body.appendChild(heart);
 }
@@ -62,17 +61,15 @@ function calculateHearts() {
 }
 
 function adjustHeartsToColumnHeight() {
-  const targetHearts = calculateHearts(); // Desired number of hearts
+  const targetHearts = calculateHearts();
+  console.log(targetHearts); // Desired number of hearts recalculated
   const existingHearts = document.querySelectorAll(".dynamic-heart").length;
+  console.log(existingHearts);
   const difference = targetHearts - existingHearts;
 
   if (difference > 0) {
     for (let i = 0; i < difference; i++) {
       addHeart();
-    }
-  } else {
-    for (let i = 0; i < Math.abs(difference); i++) {
-      removeHeart();
     }
   }
 }
