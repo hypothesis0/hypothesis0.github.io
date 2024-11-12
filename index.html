@@ -1,0 +1,32 @@
+<!doctype html>
+<html>
+  <head>
+    <style>
+      html, body {
+        margin: 0;
+        padding: 0;
+        height: 20vh; /* Make page scrollable */
+        overflow-x: hidden;
+      }
+      #scroll {
+        position: absolute;
+        color: black;
+        left: 50%;
+        top: 50%;
+        font-size: 500px;
+        transform: translate(-50%, -50%);
+      }
+    </style>
+  </head>
+  <body>
+    <div id="scroll">scroll</div>
+
+    <script>
+      // Detect scroll with the wheel event for reliability
+      window.addEventListener('wheel', () => {
+        window.location.href = 'endlesscolumn.html'; // Redirects to the next page
+      }, { once: true }); // Trigger only once
+    </script>
+  </body>
+</html>
+
