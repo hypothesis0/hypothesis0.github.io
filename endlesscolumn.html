@@ -3,12 +3,23 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Endless Roman Column</title>
+<link rel="stylesheet" href="style.css">
 <style>
-   
+     
+     body {
+  background-color: #ffffff; /* Light gray background */
+  
+}
+
+   @keyframes floatAnimation {
+            0% { transform: translate(0, 0); }
+            50% { transform: translate(0, -20px); }
+            100% { transform: translate(0, 0); }
+        }
 
     #pageHeightDisplay {
     position: fixed;
-    font: arial;
+    /* font: arial; */
     bottom: 10px; /* Distance from the bottom of the viewport */
     right: 10px; /* Distance from the right of the viewport */
     background-color: white; /* Background color for visibility */
@@ -16,22 +27,299 @@
     border: 1px solid #ddd; /* Optional: adds a border */
     z-index: 1001; /* Ensures it stays above other content */
     opacity: 0.8; /* Optional: makes the background slightly transparent */
-}
-
-    .dynamic-image {    
-        left: 48%;
-        transform: translateX(450%);
-        width: 10%;
-        display: block;
-        z-index: 10;
     }
+
+    #higher {
+        position: absolute;
+        color: black;
+        width: 100vw;
+        text-align: center;
+        top: 3000px;
+        font-size: 5vw;
+        z-index: 11;
+       
+        /* transform: translate(-50%, -50%); */
+      }
+ 
+    #scroll1 {
+        position: absolute;
+        color: black;
+        width: 100vw;
+        /* left: 10%; */
+        top: 12000px;
+        text-align: center;
+        font-size: 10vw;
+        z-index: 11;
+        /* transform: translate(-50%, -50%); */
+      }
+
+      #scroll2 {
+        /* the more you scroll the higher the column */
+        position: absolute;
+        color: black;   
+        width: 100vw;
+        text-align: center;
+        top: 20700px;
+        font-size: 5vw;
+        z-index: 11;
+        /* transform: translate(-50%, -50%); */
+      }
+       
+      #scroll3 {
+         /* continue */
+        position: absolute;
+        color: black;
+        width: 100vw;
+        text-align: center;
+        top: 30000px;
+        font-size: 7vw;
+        z-index: 11;
+      }
+
+      #scroll4 {
+        position: absolute;
+        color: black;
+        width: 100vw;
+        text-align: center;
+        top: 60000px;
+        font-size: 10vw;
+        z-index: 11;
+        animation: floatAnimation 2s ease-in-out infinite;
+      }
+  
+
+      #more1{
+        position: absolute;
+        color: black;
+        width: 100vw;
+        text-align: center;
+        
+        top: 80000px;
+        font-size: 30vw;
+        z-index: 15;
+        animation: floatAnimation 2s ease-in-out infinite;
+    }
+
+    #more2{
+        position: absolute;
+        color: black;
+        width: 100vw;
+        text-align: center;
+        top: 100000px;
+        font-size: 49vw;
+        z-index: 15;
+        animation: floatAnimation 2s ease-in-out infinite;
+    }
+
+    #number{
+        position: absolute;
+        color: black;
+        width: 100vw;
+        text-align: center;
+        top: 140000px;
+        font-size: 6vw;
+        z-index: 15;
+    }
+    
+
+    #scroll5{
+    position: absolute;
+    color: black;
+    width: 100vw;
+    text-align: center;
+    top: 150000px;
+    font-size: 9vw;
+    z-index: 11;
+    }
+
+    #scroll6{
+    /* endlessly look up to the beauty of power */
+    position: absolute;
+    color: black;
+    width: 100vw;
+    text-align: center;
+    top: 160000px;
+    font-size: 9vw;
+    z-index: 11;
+    }
+
+    #scroll6plus{
+        position: absolute;
+    color: black;
+    width: 100vw;
+    text-align: center;
+    top: 165000px;
+    font-size: 9vw;
+    z-index: 11;
+    }
+
+#scroll7{
+    /* imitate violence */
+    position: absolute;
+    color: black;
+    width: 100vw;
+    text-align: center;
+    top: 172000px;
+    font-size: 10vw;
+    z-index: 11;
+    }
+
+    #scroll8{
+        /* violently reproduce */
+    position: absolute;
+    color: black;
+    width: 100vw;
+    text-align: center;
+    top: 172300px;
+    font-size: 10vw;
+    z-index: 11;
+    }
+
+    #scroll9{
+    position: absolute;
+    color: black;
+    width: 100vw;
+    text-align: center;
+    top: 182300px;
+    font-size: 10vw;
+    z-index: 11;
+    }
+
+    #scroll10{
+        
+    position: absolute;
+    color: black;
+    width: 100vw;
+    text-align: center;
+    top: 193300px;
+    font-size: 10vw;
+    z-index: 11;
+    }
+
+  #img1{
+    position: absolute;
+    top:63000px;
+    left:10% 
+  }
+
+  #lookup{
+    position: absolute;
+    top:162000px;
+    left:10% ;
+    filter: grayscale(100%); 
+    width: 20%; /* Full viewport width */
+    height: 20%; /* Full viewport height */
+    transform: scale(0.23);
+   
+  }
+
+      #image-container {
+            position: absolute;
+            width: 100vw;
+            height: 60000px;
+            box-sizing: border-box;
+            top: 65000px;
+            filter: grayscale(100%); 
+            overflow: hidden;
+            
+        }
+
+
+
+
+        #image-container img {
+            position: absolute;
+            transform: scale(4);
+            object-fit: contain;         /* Maintain aspect ratio while fitting within container */
+  display: block;              /* Prevents inline gaps */
+  margin: auto;      
+           
+        }
+    .dynamic-image {  
+        /* column   */
+        left: 49%;
+        transform: translateX(1200%);
+        width: 4vw;
+        display: block;
+        z-index: 5;
+    }
+
+   
 </style>
 </head>
 <body>
-  
+    <div id="higher">do you wanna <br>build a higher <br> column?</div>
     
+    <div id="scroll1">scroll</div>
+
+    <div id="scroll2">the more you scroll <br>the higher the column</div>
     <!-- Placeholder for displaying the page height -->
-    <a id="pageHeightDisplay" href="your-target-url-here" target="_blank">column height: 0 cm</a>
+    <div id="scroll3">continue<br> scrolling <br>for higher</div>
+
+    <div id="scroll4">wanna more????😈</div>
+
+    <div id="more1">more</div>
+
+    <div id="more2">more</div>
+
+    <div id="number">You've built over 800 columns on the page, towering over 35 meters.</div>
+
+                <!-- 很多照片 -->
+    <div id="scroll5">aren't we building <br>enough of roman columns?</div>
+
+    <div id="scroll6">endlessly look up to <br>the beauty of power</div>
+
+    <div id="scroll6plus">the power that<br>once enslave others</div>
+
+    <div id="scroll7">imitate violence</div>
+
+    <div id="scroll8">violently reproduce</div>
+
+    <div id="scroll9">can we stop?</div>
+
+    <div id="scroll10">give me your heart, I give you everything.</div>
+
+    
+<div id="img1">
+    <img src="column19.jpg" alt="Sample Image"> </div>
+
+    <div id="lookup">
+        <img src="lookup.jpg" alt="Sample Image"> </div>
+
+    <div id="image-container">
+        <img src="column13.jpg" alt="Image 1">
+        <img src="column14.jpg" alt="Image 2">
+        <img src="column15.jpg" alt="Image 3">
+        <img src="column16.jpg" alt="Image 4">        
+        <img src="column17.jpg" alt="Image 6">    
+        <img src="column18.jpg" alt="Image 8">    
+        <img src="column7.jpg" alt="Image 7">
+        <img src="column8.jpg" alt="Image 8">
+        <img src="column5.jpg" alt="Image 9">
+       
+        <img src="column21.jpeg" alt="Image 10">
+        <img src="column22.jpg" alt="Image 11">
+        <img src="column23.jpg" alt="Image 12">
+        <img src="column24.jpg" alt="Image 13">
+        <img src="column25.jpg" alt="Image 14">
+        <img src="column26.jpeg" alt="Image 15">
+        <img src="column27.jpeg" alt="Image 16">
+        <img src="column28.jpeg" alt="Image 17">
+        <img src="column29.jpg" alt="Image 18">
+        <img src="column30.jpeg" alt="Image 19">
+        <img src="column31.jpeg" alt="Image 20">
+     
+      
+        <!-- Add more images as needed -->
+    </div>
+
+    
+   
+
+
+    <script src="toomanysketch.js"></script>
+
+    <a id="pageHeightDisplay" target="_blank">column height: 0 cm</a>
 
 <script src="sketch.js"></script>
 </body>
